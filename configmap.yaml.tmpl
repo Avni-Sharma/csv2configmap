@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ operatorName }}
+  namespace: olm
+data:
+  clusterServiceVersions: |2-
+-{{ csvFile }}    
+  customResourceDefinitions: |2-
+-{{ crdFile }}
+
+  packages: |2-
+-{{ packageFile }}
